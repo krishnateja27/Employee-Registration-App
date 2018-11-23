@@ -1,0 +1,65 @@
+﻿@*@using Microsoft.Teams.Samples.HelloWorld.Web.Models;*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <p style="color:black;font-size:20px;">
+           EmployeeList
+        </p>
+        <div class="panel-group">
+            <div class="body">
+                <table rules="none" border="0" cellpadding="20" cellspacing="20">
+                    <thead>
+                        <tr style="opacity:0.7">
+                            <th style="padding:15px">
+                                ID
+                            </th>
+                            <th style="padding:15px">
+                                Name
+                            </th>
+                            <th style="padding:15px">
+                                PhoneNumber
+                            </th>
+                            <th style="padding:15px">
+                                Address
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Microsoft.Teams.Samples.HelloWorld.Web.Models.EmployeeList.EmployeesList)
+                        {
+                            <tr>
+                                <td>
+                                    @item.ID
+                                </td>
+                                <td>
+                                    @item.Name
+                                </td>
+                                <td>
+                                    @item.PhoneNumber
+                                </td>
+                                <td>
+                                    @item.Address
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
